@@ -1,0 +1,8 @@
+.section {
+	height: 100vh;
+	padding-top: 70px;
+}
+.form-buttons {
+	float: right;
+	margin: 20px 0;
+}
