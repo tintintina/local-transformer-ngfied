@@ -7,26 +7,31 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <li><a href="#">Data transform tools</a></li>
-	        </li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#url-encoding">URL Encoding</a></li>
-	        <li><a href="#url-decoding">URL Decoding</a></li>
-	        <li><a href="#base64-encoding">Base64 Encoding</a></li>
-	        <li><a href="#base64-decoding">Base64 Decoding</a></li>
-	        <li><a href="#xml-formatting">XML Formatting</a></li>
-	        <li><a href="#json-formatting">JSON Formatting</a></li>
-	      </ul>
-	    </div>
-	  </div>
+		<div class="container">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#transform-options" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+			</button>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Data transform tools</a>
+			</div>
+			<div class="collapse navbar-collapse" id="transform-options">
+				<ul class="nav navbar-nav navbar-right">
+		        	<li><a href="#url-encode">URL Encode</a></li>
+		        	<li><a href="#url-decode">URL Decode</a></li>
+		        	<li><a href="#base64-encode">Base64 Encode</a></li>
+		        	<li><a href="#base64-decode">Base64 Decode</a></li>
+		        	<li><a href="#xml-format">XML Format</a></li>
+		        	<li><a href="#json-format">JSON Format</a></li>
+		      	</ul>
+		  	</div>
+	  	</div>
 	</nav>
 	<div class="container">
-		<div id="url-encoding" class="section">
-			<h2 class="section-title">URL Encoding</h2>
+		<div id="url-encode" class="section">
+			<h2 class="section-title">URL Encode</h2>
 			<div class="row">
 	  			<form id="url-encode">
 			  		<div class="col-md-6">			
@@ -42,8 +47,8 @@
 	  			</form>
 		  	</div>
 		</div>
-		<div id="url-decoding" class="section">
-			<h2 class="section-title">URL Decoding</h2>
+		<div id="url-decode" class="section">
+			<h2 class="section-title">URL Decode</h2>
 			<div class="row">
 	  			<form id="url-decode">
 			  		<div class="col-md-6">			
@@ -59,8 +64,8 @@
 	  			</form>
 		  	</div>
 		</div>
-		<div id="base64-encoding" class="section">
-			<h2 class="section-title">Base64 Encoding</h2>
+		<div id="base64-encode" class="section">
+			<h2 class="section-title">Base64 Encode</h2>
 			<div class="row">
 	  			<form id="base64-encode">
 			  		<div class="col-md-6">			
@@ -76,8 +81,8 @@
 	  			</form>
 		  	</div>
 		</div>
-		<div id="base64-decoding" class="section">
-			<h2 class="section-title">Base64 Decoding</h2>
+		<div id="base64-decode" class="section">
+			<h2 class="section-title">Base64 Decode</h2>
 			<div class="row">
 	  			<form id="base64-decode">
 			  		<div class="col-md-6">			
@@ -93,8 +98,8 @@
 	  			</form>
 		  	</div>
 		</div>
-		<div id="xml-formatting" class="section">
-			<h2 class="section-title">XML Formatting</h2>
+		<div id="xml-format" class="section">
+			<h2 class="section-title">XML Format</h2>
 			<div class="row">
 	  			<form id="xml-format">
 			  		<div class="col-md-6">			
@@ -110,8 +115,8 @@
 	  			</form>
 		  	</div>
 		</div>
-		<div id="json-formatting" class="section">
-			<h2 class="section-title">JSON Formatting</h2>
+		<div id="json-format" class="section">
+			<h2 class="section-title">JSON Format</h2>
 			<div class="row">
 	  			<form id="json-format">
 			  		<div class="col-md-6">			
