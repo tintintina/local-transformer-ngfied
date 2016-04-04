@@ -2,7 +2,14 @@
 	min-height: 100vh;
 	padding-top: 70px;
 }
+.form-feedback {
+	min-height: 65px;
+}
 .form-buttons {
 	float: right;
 	margin: 20px 0;
+}
+.nav-pills {
+    float: right;
+    padding-top: 5px;
 }

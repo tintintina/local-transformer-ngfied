@@ -1,10 +1,7 @@
-var myAng = angular.module('dtApp', []);
+var dtApp = angular.module('dtApp', []);
 
-myAng.controller('dtController', ['$scope', function($scope) {
-	$scope.sections = [
-		{name: 'url-encode', title: 'URL Encode', inputPlaceholder: 'String to URL Encode', buttonName: 'URL Encode'}
-	];
-	
+dtApp.controller('dtController', ['$scope', '$location', function($scope, $location) {
+
 	$scope.submit = function() {
 		console.log("form submitted");
 	};
@@ -12,5 +9,9 @@ myAng.controller('dtController', ['$scope', function($scope) {
 	$scope.clear = function() {
 		console.log("clear it out");
 	}
+
+	$scope.isActive = function (location) {
+		return (location === $location.path()) || (location === '/url-encode' && $location.path() === '/');
+	};
 
 }]);
