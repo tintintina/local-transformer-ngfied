@@ -1,6 +1,10 @@
-var dtApp = angular.module('dtApp', []);
+angular
+	.module('dtApp', [])
+	.controller('dtController', DtController);
 
-dtApp.controller('dtController', ['$scope', '$location', function($scope, $location) {
+DtController.$inject = ['$scope', '$location'];
+
+function DtController($scope, $location) {
 
 	$scope.submit = function() {
 		console.log("form submitted");
@@ -12,6 +16,5 @@ dtApp.controller('dtController', ['$scope', '$location', function($scope, $locat
 
 	$scope.isActive = function (location) {
 		return (location === $location.path()) || (location === '/url-encode' && $location.path() === '/');
-	};
-
-}]);
+	};	
+}
