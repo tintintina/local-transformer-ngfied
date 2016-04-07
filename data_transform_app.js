@@ -1,20 +1,20 @@
 angular
 	.module('dtApp', [])
-	.controller('dtController', DtController);
+	.controller('DtController', DtController);
 
-DtController.$inject = ['$scope', '$location'];
+DtController.$inject = ['$location'];
 
-function DtController($scope, $location) {
+function DtController($location) {
 
-	$scope.submit = function() {
+	this.submit = function() {
 		console.log("form submitted");
 	};
 
-	$scope.clear = function() {
+	this.clear = function() {
 		console.log("clear it out");
 	}
 
-	$scope.isActive = function (location) {
+	this.isActive = function (location) {
 		return (location === $location.path()) || (location === '/url-encode' && $location.path() === '/');
 	};	
 }
