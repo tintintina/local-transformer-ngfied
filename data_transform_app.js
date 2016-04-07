@@ -2,9 +2,16 @@ angular
 	.module('dtApp', [])
 	.controller('DtController', DtController);
 
-DtController.$inject = ['$location'];
+function DtController() {
+	this.tab = "url-encode";
 
-function DtController($location) {
+	this.setTab = function(tab) {
+		this.tab = tab;
+	}
+
+	this.isTabSet = function(tab) {
+		return this.tab === tab;
+	}
 
 	this.submit = function() {
 		console.log("form submitted");
@@ -13,8 +20,4 @@ function DtController($location) {
 	this.clear = function() {
 		console.log("clear it out");
 	}
-
-	this.isActive = function (location) {
-		return (location === $location.path()) || (location === '/url-encode' && $location.path() === '/');
-	};	
 }
