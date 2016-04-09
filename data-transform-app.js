@@ -1,6 +1,7 @@
 angular
 	.module('dtApp', [])
-	.controller('DtController', DtController);
+	.controller('DtController', DtController)
+	.directive('bigInputOutput', BigInputOutput);
 
 function DtController() {
 	this.tab = "url-encode";
@@ -19,5 +20,12 @@ function DtController() {
 
 	this.clear = function() {
 		console.log("clear it out");
+	}
+}
+
+function BigInputOutput() {
+	return {
+		restrict: 'E',
+		templateUrl: 'big-input-output/bio.template.html'
 	}
 }
