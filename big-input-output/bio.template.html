@@ -1,9 +1,9 @@
 <div class="container section">
 	<div class="row">
-		<form name="dtCtrl.form">
-			<div class="form-feedback"> </div>
+		<form name="dtForm">
+			<div class="form-feedback error-feedback" ng-class="dt.errorFeedback ? 'alert alert-danger' : '' " > {{ dt.errorFeedback }} </div>
 	  		<div class="col-md-6">			
-	  			<textarea id="data-input" class="form-control" rows="15" placeholder="Data to process" ng-model="section.input" ng-model-options="{ updateOn: 'blur' }"></textarea>
+	  			<textarea id="data-input" class="form-control" rows="15" placeholder="{{ dt.sections[dt.tab].inputPlaceholder }}" ng-model="section.input" ng-model-options="{ updateOn: 'blur' }"></textarea>
 	  		</div>
 	  		<div class="col-md-6">			
 	  			<textarea id="data-output" class="form-control" rows="15" ng-model="section.output"></textarea>
@@ -12,8 +12,6 @@
 			  		<input class="btn btn-default" type="reset" value="Clear" ng-click="dt.clear(section)">
 			  	</div>
 	  		</div>	
-	  		<div>input: {{section.input}}</div>
-	  		<div>output: {{section.output}} </div>
 		</form>
 	</div>
 </div>
