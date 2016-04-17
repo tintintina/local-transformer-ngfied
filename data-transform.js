@@ -37,11 +37,3 @@ function jsonSoPretty(jsonString) {
 function FormInputException(message) {
 	this.message = message;
 }
-function showError(section, errorMessage) {
-	$(".form-feedback", section).addClass("alert alert-danger");
-	$(".form-feedback", section).text(errorMessage);
-}
-function resetForm(section) {
-	$(".form-feedback", section).removeClass("alert alert-danger");
-	$(".form-feedback", section).empty();
-}

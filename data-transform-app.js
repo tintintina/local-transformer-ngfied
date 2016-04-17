@@ -42,19 +42,24 @@ function DtController() {
 	}
 
 	this.submit = function(section) {
+		this.clear();
+
 		var input = section.input;
+
 		try {
 			section.output = window[this.sections[this.tab].functionName](input);
 		} catch(e) {
 			if (e instanceof FormInputException) {
 				this.errorFeedback = e.message;
+				section.output = "";
 			}
 		}
 	};
 
-	this.clear = function(section) {
+	this.clear = function() {
 		this.errorFeedback = "";
 	}
+
 }
 
 function BigInputOutput() {
