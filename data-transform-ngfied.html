@@ -21,12 +21,10 @@
 				</div>
 				<div class="collapse navbar-collapse" id="transform-options">
 					<ul class="nav nav-pills pull-right">
-			        	<li ng-class="{active:dt.isTabSet('url-encode')}"><a href="#url-encode" ng-click="dt.setTab('url-encode')">URL Encode</a></li>
-			        	<li ng-class="{active:dt.isTabSet('url-decode')}"><a href="#url-decode" ng-click="dt.setTab('url-decode')">URL Decode</a></li>
-			        	<li ng-class="{active:dt.isTabSet('base64-encode')}"><a href="#base64-encode" ng-click="dt.setTab('base64-encode')">Base64 Encode</a></li>
-			        	<li ng-class="{active:dt.isTabSet('base64-decode')}"><a href="#base64-decode" ng-click="dt.setTab('base64-decode')">Base64 Decode</a></li>
-			        	<li ng-class="{active:dt.isTabSet('xml-format')}"><a href="#xml-format" ng-click="dt.setTab('xml-format')">XML Format</a></li>
-			        	<li ng-class="{active:dt.isTabSet('json-format')}"><a href="#json-format" ng-click="dt.setTab('json-format')">JSON Format</a></li>
+						<li ng-class="{active:dt.isTabSet(key)}" ng-repeat="(key, value) in dt.sections">
+
+							<a href="#{{key}}" ng-click="dt.setTab(key)">{{value.title}}</a>
+						</li>
 			      	</ul>
 			  	</div>
 		  	</div>

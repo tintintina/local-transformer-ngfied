@@ -6,30 +6,36 @@ angular
 function DtController() {
 	this.tab = "url-encode";
 	this.sections = {
-	    "url-encode": {
-	        "inputPlaceholder": "String to URL Encode",
-	        "functionName": "urlEncode"
-	    },
-	    "url-decode": {
-	        "inputPlaceholder": "String to URL Decode",
-	        "functionName": "urlDecode"
-	    },
-	    "base64-encode": {
-	        "inputPlaceholder": "String to Base64 Encode",
-	        "functionName": "base64Encode"
-	    },
-	    "base64-decode": {
-	        "inputPlaceholder": "String to Base64 Decode",
-	        "functionName": "base64Decode"
-	    },
-	    "xml-format": {
-	        "inputPlaceholder": "XML to format",
-	        "functionName": "xmlSoPretty"
-	    },
-	    "json-format": {
-	        "inputPlaceholder": "JSON to format",
-	        "functionName": "jsonSoPretty"
-	    }
+		"url-encode": {
+			"title": "URL Encode",
+			"inputPlaceholder": "String to URL Encode",
+			"functionName": "urlEncode"
+		},
+		"url-decode": {
+			"title": "URL Decode",
+			"inputPlaceholder": "String to URL Decode",
+			"functionName": "urlDecode"
+		},
+		"base64-encode": {
+			"title": "Base64 Encode",
+			"inputPlaceholder": "String to Base64 Encode",
+			"functionName": "base64Encode"
+		},
+		"base64-decode": {
+			"title": "Base64 Decode",
+			"inputPlaceholder": "String to Base64 Decode",
+			"functionName": "base64Decode"
+		},
+		"xml-format": {
+			"title": "XML Format",
+			"inputPlaceholder": "XML to format",
+			"functionName": "xmlSoPretty"
+		},
+		"json-format": {
+			"title": "JSON Format",
+			"inputPlaceholder": "JSON to format",
+			"functionName": "jsonSoPretty"
+		}
 	};
 
 	this.setTab = function(tab) {
